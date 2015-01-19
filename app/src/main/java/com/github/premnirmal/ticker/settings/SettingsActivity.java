@@ -13,11 +13,13 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.devpaul.filepickerlibrary.FilePickerActivity;
+import com.fuzz.android.limelight.LimeLight;
 import com.github.premnirmal.ticker.StocksApp;
 import com.github.premnirmal.ticker.Tools;
 import com.github.premnirmal.ticker.model.IStocksProvider;
@@ -210,5 +212,29 @@ public class SettingsActivity extends PreferenceActivity {
                     }
                 })
                 .show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        LimeLight.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        LimeLight.onPause(this);
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        LimeLight.onWindowFocusChanged(this, hasFocus);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        LimeLight.onCreateOptionsMenu(this, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

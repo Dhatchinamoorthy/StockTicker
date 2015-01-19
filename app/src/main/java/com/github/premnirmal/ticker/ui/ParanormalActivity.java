@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.fuzz.android.limelight.LimeLight;
 import com.github.premnirmal.ticker.BaseActivity;
 import com.github.premnirmal.ticker.StocksApp;
 import com.github.premnirmal.ticker.Tools;
@@ -64,6 +65,7 @@ public class ParanormalActivity extends BaseActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         final MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_paranormal, menu);
+        LimeLight.onCreateOptionsMenu(this, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -92,7 +94,20 @@ public class ParanormalActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        LimeLight.onResume(this);
         update();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        LimeLight.onPause(this);
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        LimeLight.onWindowFocusChanged(this, hasFocus);
     }
 
     private void update() {
