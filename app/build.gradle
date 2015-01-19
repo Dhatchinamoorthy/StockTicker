@@ -8,8 +8,8 @@ android {
         applicationId "com.github.premnirmal.tickerwidget"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 27
-        versionName "4.40.00"
+        versionCode 28
+        versionName "4.50.00"
     }
 
     signingConfigs {
@@ -52,4 +52,6 @@ dependencies {
     compile 'com.github.developerpaul123.filepickerlibrary:library:1.+'
     compile 'com.jjoe64:graphview:4.0.0'
     compile 'com.android.support:support-v4:21.0.2'
+
+    compile project(':Libraries:Limelight')
 }

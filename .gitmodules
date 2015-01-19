@@ -1,0 +1,3 @@
+[submodule "Libraries/Limelight"]
+	path = Libraries/Limelight
+	url = git@github.com:fuzz-productions/LimeLight.git

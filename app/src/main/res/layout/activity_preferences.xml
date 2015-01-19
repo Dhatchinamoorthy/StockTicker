@@ -20,33 +20,6 @@
         app:title="@string/action_Settings"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="18dp"
-        android:text="@string/action_import"
-        android:id="@+id/action_import"/>
-
-    <include layout="@layout/divider"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="18dp"
-        android:text="@string/action_export"
-        android:id="@+id/action_export"/>
-
-    <include layout="@layout/divider"/>
-
-
     <!-- Show Preference in ListView  -->
 
     <ListView
